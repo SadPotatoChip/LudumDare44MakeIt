@@ -4,25 +4,20 @@ using Questions.Conditions.Evaluations;
 
 namespace Questions.Conditions {
     public class Condition {
-        private readonly Dictionary<string, Evaluation> elements;
+        public List<Evaluation> evaluations { get; set; }
 
-        public Condition(string stringOfElements) {
-            this.elements=new Dictionary<string, Evaluation>();
-            var tagStrings=stringOfElements.Split('&');
-            foreach (var s in tagStrings) {
-                var t = new Evaluation(s);
-                elements.Add(t.name, t);
-            }
+        public Condition() {
+            
         }
 
         public bool check(IEnumerable<PlayerState> states) {
-            return states.All(state => !elements.ContainsKey(state.name) || elements[state.name].check(state));
+            return states.All(state => evaluations.All(e => e.name != state.name) || evaluations.Single(e => e.name.Equals(state.name)).check(state));
         }
         
         public override string ToString() {
             var s = "";
-            for (var i = 0; i < elements.Count; i++) {
-                s += "\n  "+i + ") " + elements.ElementAt(i).Value.ToString();
+            for (var i = 0; i < evaluations.Count; i++) {
+                s += "\n  "+i + ") " + evaluations.ElementAt(i).ToString();
             }
 
             return s;

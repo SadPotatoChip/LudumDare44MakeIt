@@ -2,9 +2,12 @@ using System;
 
 namespace FLLib {
     public class UnitRange<T> where T:IComparable{
-        public T max;
-        public T min;
+        public T max { get; set; }
+        public T min { get; set; }
 
+        public UnitRange() {
+            
+        }
         public UnitRange(T min, T max) {
             this.max = max;
             this.min = min;

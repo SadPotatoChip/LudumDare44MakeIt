@@ -3,16 +3,11 @@ using FLLib;
 
 namespace Questions {
     public class Answer {
-        public readonly string text;
-        public readonly int cost;
-        
-        public Answer(string line) {
-            var values = line.TrimEnd().Split(',');
-            if (values.Length < 4) {
-                throw new Exception("incorrect format of answer");
-            }
-            text=values[1];
-            cost=new IntRange(int.Parse(values[2]),int.Parse(values[3])).randomValue();
+        public string text { get; set; }
+        public int cost{ get; set; }
+
+        public Answer() {
+            
         }
         
         public override string ToString() {

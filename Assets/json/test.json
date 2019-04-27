@@ -1,0 +1,30 @@
+[{
+        "title": "title",
+        "text": "text",
+        "possibleAge": {
+            "min":"12",
+            "max":"13"
+        },
+        "Answers": [
+            {"text": "answer1", "cost": "12"},
+            {"text": "answer2", "cost": "11"}
+        ], 
+        "conditionGroup":{
+            "conditions": [
+                {"evaluations": [
+                    {    
+                        "isTrue":"true",
+                        "name":"Male",
+                        "comparisonType":"-1"        
+                    },
+                    {                 
+                        "isTrue":"true",
+                        "name":"Smart",
+                        "comparisonType":"2",
+                        "value":"32"
+                    }
+                ]}
+            ]
+        }   
+    }
+]

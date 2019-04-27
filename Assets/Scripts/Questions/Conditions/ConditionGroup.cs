@@ -4,21 +4,14 @@ using Questions.Conditions.Evaluations;
 
 namespace Questions.Conditions {
     public class ConditionGroup {
-        private readonly List<Condition> conditions;
+        public List<Condition> conditions { get; set; }
+
         public int lenght {
             get { return conditions.Count; }
         }
-
-        public ConditionGroup() {
-            conditions = null;
-        }
         
-        public ConditionGroup(string conditionsString) {
-            conditions=new List<Condition>();
-            foreach (var s in conditionsString.Split('|')) {
-                var cond=new Condition(s);
-                conditions.Add(cond);
-            }
+        public ConditionGroup() {
+            
         }
 
         public bool check(IEnumerable<PlayerState> states) {
