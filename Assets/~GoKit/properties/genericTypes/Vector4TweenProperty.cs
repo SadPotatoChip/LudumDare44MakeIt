@@ -50,7 +50,7 @@ public class Vector4TweenProperty : AbstractTweenProperty, IGenericProperty
 			_startValue = getter();
 		}
 		
-		// prep the diff value
+		// prep the diff amount
 		if( _isRelative && !_ownerTween.isFrom )
 			_diffValue = _endValue;
 		else

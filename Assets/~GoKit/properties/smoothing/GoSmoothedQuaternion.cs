@@ -8,7 +8,7 @@ using System.Collections;
 /// lerps or slerps a Quaternion over time. usage is like so:
 ///
 /// mySmoothedQuat = target.rotation; // creates the GoSmoothedQuaternion
-/// mySmoothedQuat.smoothValue = someNewQuaternion; // update the smoothValue whenever you would normally set the value on your object
+/// mySmoothedQuat.smoothValue = someNewQuaternion; // update the smoothValue whenever you would normally set the amount on your object
 /// target.rotation = mySmoothedQuat.smoothValue; // use the smoothValue property in an Update method to lerp/slerp it
 ///
 /// </summary>

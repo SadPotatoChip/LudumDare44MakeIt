@@ -50,7 +50,7 @@ public class FloatTweenProperty : AbstractTweenProperty, IGenericProperty
 			_startValue = getter();
 		}
 		
-		// setup the diff value
+		// setup the diff amount
 		if( _isRelative && !_ownerTween.isFrom )
 			_diffValue = _endValue;
 		else

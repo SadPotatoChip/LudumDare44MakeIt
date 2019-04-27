@@ -225,7 +225,7 @@ public class AbstractGoTweenCollection : AbstractGoTween
         // if we iterated last frame and this flow restarts from the beginning, we now need to reset all
         // of the flowItem tweens to either the beginning or the end of their respective timelines
         // we also want to do this in the _opposite_ way that we would normally iterate on them
-        // as the start value of a later flowItem may alter a property of an earlier flowItem.
+        // as the start amount of a later flowItem may alter a property of an earlier flowItem.
         if ( _didIterateLastFrame && loopType == GoLoopType.RestartFromBeginning )
         {
             if ( isReversed || _isLoopingBackOnPingPong )

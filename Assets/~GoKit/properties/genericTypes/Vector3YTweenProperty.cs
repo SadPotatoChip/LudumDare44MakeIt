@@ -27,7 +27,7 @@ public class Vector3YTweenProperty : Vector3XTweenProperty
 			_startValue = _getter().y;
 		}
 
-		// prep the diff value
+		// prep the diff amount
 		if( _isRelative && !_ownerTween.isFrom )
 			_diffValue = _endValue;
 		else

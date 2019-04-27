@@ -1,10 +1,12 @@
 using System;
 using FLLib;
+using PlayerManagement.AnswerEffectManagement;
 
 namespace Questions {
     public class Answer {
         public string text { get; set; }
         public int cost{ get; set; }
+        public AnswerEffectGroup answerEffectGroup{ get; set; }
 
         public Answer() {
             

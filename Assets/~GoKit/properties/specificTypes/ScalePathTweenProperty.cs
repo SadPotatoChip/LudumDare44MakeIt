@@ -54,7 +54,7 @@ public class ScalePathTweenProperty : AbstractTweenProperty
 		
 		_path.buildPath();
 		
-		// a from tween means the start value is the last node
+		// a from tween means the start amount is the last node
 		if( _ownerTween.isFrom )
 			_startValue = _path.getLastNode();
 		else

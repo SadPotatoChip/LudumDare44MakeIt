@@ -6,7 +6,9 @@
             "max":"13"
         },
         "Answers": [
-            {"text": "answer1", "cost": "12"},
+            {"text": "answer1", "cost": "12", "asnwerEffectGroup":{
+                "effects":["health|+5|4","~gay","health|-3"]
+            }},
             {"text": "answer2", "cost": "11"}
         ], 
         "conditionGroup":{

@@ -1,19 +1,14 @@
-public abstract class PlayerState {
-    public int? value;
-    public bool? isTrue;
-    private string _name;
-    public string name {
-        get { return name; }
-        set { _name = value.ToLower(); }
-    }
+namespace PlayerManagement.States {
+    public class PlayerState {
+        public int? amount;
+        public bool? isTrue;
+        public string name;
 
-    public PlayerState(int? value, string name) {
-        this.value = value;
-        this.name = name;
-    }
+        public PlayerState(int amount, bool isTrue, string name) {
+            this.amount = amount;
+            this.isTrue = isTrue;
+            this.name = name;
+        }
 
-    public PlayerState(bool isTrue, string name) {
-        this.isTrue = isTrue;
-        this.name = name;
     }
 }

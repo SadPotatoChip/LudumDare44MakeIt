@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using PlayerManagement.States;
 
 namespace Questions.Conditions.Evaluations {
     public class Evaluation {
@@ -22,11 +23,11 @@ namespace Questions.Conditions.Evaluations {
                 case ValueComparisonType.None:
                     return state.isTrue == isTrue;
                 case ValueComparisonType.Equal:
-                    return state.value == value;
+                    return state.amount == value;
                 case ValueComparisonType.LessThan:
-                    return state.value > value;
+                    return state.amount > value;
                 case ValueComparisonType.GreaterThan:
-                    return state.value < value;
+                    return state.amount < value;
             }
 
             throw new NotSupportedException("Unsupported Comparison Type Encountered");

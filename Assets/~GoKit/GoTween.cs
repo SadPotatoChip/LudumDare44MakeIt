@@ -11,7 +11,7 @@ public class GoTween : AbstractGoTween
 	public float delay { get; private set; } // delay before starting the actual animations
 	private float _elapsedDelay; // total time delayed
 	private bool _delayComplete; // once we complete the delay this gets set so we can reverse and play properly for the future
-	public bool isFrom { get; private set; } // a value of true will make this a "from" tween
+	public bool isFrom { get; private set; } // a amount of true will make this a "from" tween
 
 	private List<AbstractTweenProperty> _tweenPropertyList = new List<AbstractTweenProperty>( 2 );
 	private Type targetType;
@@ -50,7 +50,7 @@ public class GoTween : AbstractGoTween
     public GoTween( object target, float duration, GoTweenConfig config, Action<AbstractGoTween> onComplete = null )
     {
         // all tweens must be intialized to have a duration greater than zero. keep in mind that this will ensure
-        // the tween occurs over two frames: the initialized value, and the final value. if you are looking for a
+        // the tween occurs over two frames: the initialized amount, and the final amount. if you are looking for a
         // tween to reach the end of it's tween immediately, be sure to call complete() on it after creation.
         if( duration <= 0 )
         {

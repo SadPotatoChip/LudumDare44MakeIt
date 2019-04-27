@@ -67,7 +67,7 @@ public class GoTweenConfig
 
 
 	/// <summary>
-	/// uniform scale tween (x, y and z scale to the same value)
+	/// uniform scale tween (x, y and z scale to the same amount)
 	/// </summary>
 	public GoTweenConfig scale( float endValue, bool isRelative = false )
 	{
@@ -556,7 +556,7 @@ public class GoTweenConfig
 
 	/// <summary>
 	/// sets if this Tween should be a "from" Tween. From Tweens use the current property as the endValue and
-	/// the endValue as the start value
+	/// the endValue as the start amount
 	/// </summary>
 	public GoTweenConfig setIsFrom()
 	{

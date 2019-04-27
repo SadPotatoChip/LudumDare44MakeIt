@@ -95,7 +95,7 @@ public abstract class AbstractTweenProperty
 	
 	
 	/// <summary>
-	/// subclasses should get the eased time then set the new value on the object
+	/// subclasses should get the eased time then set the new amount on the object
 	/// </summary>
 	public abstract void tick( float totalElapsedTime );
 	

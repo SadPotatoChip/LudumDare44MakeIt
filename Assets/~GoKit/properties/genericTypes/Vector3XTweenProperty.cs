@@ -52,7 +52,7 @@ public class Vector3XTweenProperty : AbstractVector3TweenProperty, IGenericPrope
 			_startValue = _getter().x;
 		}
 
-		// prep the diff value
+		// prep the diff amount
 		if( _isRelative && !_ownerTween.isFrom )
 			_diffValue = _endValue;
 		else
