@@ -8,8 +8,11 @@ using Questions.Conditions;
 namespace Questions {
     public class Question {
 
+        public string id { get; set; }
+        public string nextId { get; set; }
         public IntRange possibleAge { get; set; }
-        public string title { get; set; }
+        
+        public int chance { get; set; }
         public string text { get; set; }
         public List<Answer> answers { get; set; }
         public ConditionGroup conditionGroup { get; set; }
@@ -27,7 +30,6 @@ namespace Questions {
 
         public override string ToString() {
             var s = "";
-            s += "<b>Title: " + title +"</b>\n";
             s += "Text: " + text +"\n";
             s += "PossibleAge: " + possibleAge.min + "->" + possibleAge.max +"\n";
             s += "Answers: \n";

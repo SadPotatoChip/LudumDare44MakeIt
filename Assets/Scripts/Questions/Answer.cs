@@ -1,5 +1,6 @@
 using System;
 using FLLib;
+using PlayerManagement;
 using PlayerManagement.AnswerEffectManagement;
 
 namespace Questions {
@@ -10,6 +11,11 @@ namespace Questions {
 
         public Answer() {
             
+        }
+
+        public void applyToPlayer(Player player) {
+            player.age += cost;
+            answerEffectGroup.applyToPlayer(player);
         }
         
         public override string ToString() {

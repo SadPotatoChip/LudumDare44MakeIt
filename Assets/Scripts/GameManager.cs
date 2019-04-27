@@ -12,9 +12,7 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 		instance = this;
-		QAManager.instance.activeQuestions=JSONReader.readQuestionsFromFile("test.json");
-		PlayerManager.instance.startGame();	
-		QAManager.instance.nextQuestion();		
-		Debug.Log(QAManager.instance.activeQuestions.First().ToString());
+		
+		PlayerManager.instance.startGame();
 	}
 }

@@ -4,10 +4,8 @@ using PlayerManagement.AfflictionManagement;
 namespace PlayerManagement.AnswerEffectManagement {
     public class AnswerEffectGroup {
         public List<string> effects { get; set; }
-
-        public string test { get; set; }
         
-        public void executeOnPlayer(Player player) {
+        public void applyToPlayer(Player player) {
             if (effects == null || effects.Count == 0) {
                 return;
             }

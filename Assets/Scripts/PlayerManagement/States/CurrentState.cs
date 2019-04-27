@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using PlayerManagement.AfflictionManagement;
 
 namespace PlayerManagement.States {
@@ -41,7 +42,10 @@ namespace PlayerManagement.States {
             }
             playerStates.Add(key,new PlayerState(amount??0,(bool)isTrue,key));
         }
-        
+
+        public List<PlayerState> getStates() {
+            return playerStates.Values.ToList();
+        }
         
     }
 }

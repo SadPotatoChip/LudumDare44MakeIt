@@ -1,0 +1,149 @@
+[
+    {
+        "text": "You are born...",
+        "possibleAge": {
+            "min":"0",
+            "max":"0"
+        },
+        "Answers": [
+            {"text": "I am?", "cost": "12", "answerEffectGroup":{                
+                }
+            }
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "You are a",
+        "possibleAge": {
+            "min":"1",
+            "max":"1"
+        },
+        "Answers": [
+            {"text": "Girl", "cost": "12", "answerEffectGroup":{   
+                "effects":["~male","female"]             
+                }
+            },
+            {"text": "Boy", "cost": "12", "answerEffectGroup":{    
+                "effects":["male","!female"]              
+            }
+        }
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "And you already know you looooove video games",
+        "possibleAge": {
+            "min":"2",
+            "max":"2"
+        },
+        "Answers": [
+            {"text": "Yup!", "cost": "12", "answerEffectGroup":{   
+                "effects":["nerd"]             
+                }
+            }       
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "And you already know another thing..",
+        "possibleAge": {
+            "min":"3",
+            "max":"3"
+        },
+        "Answers": [
+            {"text": "What?", "cost": "12", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "I already know everything.", "cost": "12", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "I'm not a nerd!", "cost": "12", "answerEffectGroup":{   
+                "effects":["~nerd"]             
+                }
+            }       
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "That you will one day make the greatest video game of all time..",
+        "possibleAge": {
+            "min":"4",
+            "max":"4"
+        },
+        "Answers": [
+            {"text": "Thats why im here", "cost": "12", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "Who even wants that?", "cost": "12", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "I thought this was the greatest video game of all time", "cost": "12", "answerEffectGroup":{   
+                "effects":["kissass"]             
+                }
+            }       
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "You only get one chance",
+        "possibleAge": {
+            "min":"5",
+            "max":"5"
+        },
+        "Answers": [
+            {"text": "I know...", "cost": "12", "answerEffectGroup":{   
+                "effects":["motivation|1|12000"]             
+                }
+            },  
+            {"text": "Can't I just restart the game?", "cost": "12", "answerEffectGroup":{   
+                "effects":["smarts|-5"]             
+                }
+            },  
+            {"text": "Literally could not care less", "cost": "12", "answerEffectGroup":{   
+                "effects":["motivation|-1|12000"]             
+                }
+            }       
+        ], 
+        "conditionGroup":{
+            
+        }   
+    },
+    {
+        "text": "Ready?",
+        "possibleAge": {
+            "min":"6",
+            "max":"6"
+        },
+        "Answers": [
+            {"text": "I'm ready", "cost": "0", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "No, but I don't seem to have a choice at this point", "cost": "0", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            },  
+            {"text": "I'll be ready next year", "cost": "12", "answerEffectGroup":{   
+                "effects":[]             
+                }
+            }       
+        ], 
+        "conditionGroup":{
+            
+        }   
+    }
+]
