@@ -5,6 +5,8 @@ namespace PlayerManagement.AnswerEffectManagement {
     public class AnswerEffectGroup {
         public List<string> effects { get; set; }
 
+        public string test { get; set; }
+        
         public void executeOnPlayer(Player player) {
             if (effects == null || effects.Count == 0) {
                 return;
@@ -30,6 +32,16 @@ namespace PlayerManagement.AnswerEffectManagement {
                         break;
                 }
             }
-        }                
+        }
+
+        public override string ToString() {
+            var s = "";
+            foreach (var effect in effects) {
+                s += effect+ " ";
+            }
+
+            s += "\n";
+            return s;
+        }
     }
 }

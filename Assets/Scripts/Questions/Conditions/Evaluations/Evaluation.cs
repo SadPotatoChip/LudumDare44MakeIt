@@ -8,7 +8,7 @@ namespace Questions.Conditions.Evaluations {
 
         private string _name;
         public string name {
-            get { return name; }
+            get { return _name; }
             set { _name = value.ToLower(); }
         }
         public ValueComparisonType comparisonType { get; set; }

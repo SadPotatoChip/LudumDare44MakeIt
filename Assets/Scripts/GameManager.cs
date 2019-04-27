@@ -5,19 +5,16 @@ using System.Linq;
 using PlayerManagement;
 using UnityEngine;
 using Readers;
+using UIManager.QuestionAnswerUI;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 
 	private void Awake() {
 		instance = this;
-		var qs=JSONReader.readQuestionsFromFile("test.json");
-		var player = new Player();
-		qs.First().answers.First().answerEffectGroup.executeOnPlayer(player);
-		
-		
-		foreach (var q in qs) {
-		   Debug.Log(q.ToString());
-		}
+		QAManager.instance.activeQuestions=JSONReader.readQuestionsFromFile("test.json");
+		PlayerManager.instance.startGame();	
+		QAManager.instance.nextQuestion();		
+		Debug.Log(QAManager.instance.activeQuestions.First().ToString());
 	}
 }

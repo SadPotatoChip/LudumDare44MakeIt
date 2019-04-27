@@ -9,5 +9,9 @@ namespace PlayerManagement {
         private void Awake() {
             instance = this;
         }
+
+        public void startGame() {
+            player=new Player();
+        }
     }
 }

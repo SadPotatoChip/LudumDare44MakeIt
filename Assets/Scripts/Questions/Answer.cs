@@ -15,7 +15,9 @@ namespace Questions {
         public override string ToString() {
             var s = "";
             s += "\n Text: " + text;
-            s += "\n Cost: " + cost +"\n";
+            s += "\n Cost: " + cost ;
+            s += "\n Effects: \n";
+            s += answerEffectGroup.ToString();
             return s;
         }
     }
