@@ -4,7 +4,12 @@ using System.Linq;
 namespace Questions.Conditions.Evaluations {
     public class Evaluation {
         public bool isTrue { get; set; }
-        public string name { get; set; }
+
+        private string _name;
+        public string name {
+            get { return name; }
+            set { _name = value.ToLower(); }
+        }
         public ValueComparisonType comparisonType { get; set; }
         public int value { get; set; }
 

@@ -1,7 +1,11 @@
 public abstract class PlayerState {
     public int? value;
     public bool? isTrue;
-    public string name;
+    private string _name;
+    public string name {
+        get { return name; }
+        set { _name = value.ToLower(); }
+    }
 
     public PlayerState(int? value, string name) {
         this.value = value;
